@@ -1,21 +1,7 @@
 header {
-    background-color: black;
-    color: #D4AF37;
-    padding: 20px;
-    margin-bottom: 10px;
-    border-bottom: 5px solid #D4AF37;
-}
-
-main {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-main .content{
-    width: 100%;
-}
-
-main aside{
-    width: 100%;
+  background-color: black;
+  color: #d4af37;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-bottom: 5px solid #d4af37;
 }
