@@ -11,6 +11,8 @@ import { INews } from '../../interfaces/inews.interface';
 export class BlogComponent {
   textNews: string = '';
 
+  newNews: INews = {title: '', urlImg: '', text: '', date: ''}
+
   arrNews: INews[] = [
     {
       title: 'The Substance Earns Five Academy Award Nominations',
@@ -33,5 +35,17 @@ export class BlogComponent {
     this.arrNews.forEach((news) => {
       this.textNews += `<h3>${news.title}</h3><br><img src="${news.urlImg}"><br><p>${news.text}</p><p>${news.date}</p><br><br>`;
     });
+
+    console.log(this.newNews)
   }
+
+  getNews() {
+    if (!this.newNews.title || !this.newNews.urlImg || !this.newNews.text || !this.newNews.date) {
+      alert("Please fill in all fields before submitting.");
+      return;
+    }
+    this.arrNews = [...this.arrNews, this.newNews];
+    this.newNews = {title: '', urlImg: '', text: '', date: ''};
+  }
+
 }

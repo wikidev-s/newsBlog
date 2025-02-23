@@ -1,37 +1,30 @@
 <main>
   <aside class="form">
     <!-- form -->
-    <h2>Insert news form</h2>
-    <hr />
-    <div>
-      <label for="title">Title</label>
-      <input
-        id="title"
-        type="text"
-        placeholder="Enter the title of the product"
-      />
+     <h2>Insert news form</h2>
+     <hr>
+     <div>
+         <label for="title">Title</label>
+         <input id="title" type="text" placeholder="Enter the title of the news" [(ngModel)]="newNews.title">
+     </div>
+     <div>
+         <label for="image">Image</label>
+         <input id="image" type="text" placeholder="Enter the URL of the image" [(ngModel)]="newNews.urlImg">
+     </div>
+     <div>
+         <label for="text">Text</label>
+         <input id="text" type="text" placeholder="Enter the text" [(ngModel)]="newNews.text">
+     </div>
+     <div>
+        <label for="date">Date of publication</label>
+        <input id="date" type="text" placeholder="Enter the date of publication" [(ngModel)]="newNews.date">
     </div>
-    <div>
-      <label for="image">Image</label>
-      <input id="image" type="text" placeholder="Enter the URL of the image" />
-    </div>
-    <div>
-      <label for="text">Text</label>
-      <input id="text" type="text" placeholder="Enter the text" />
-    </div>
-    <div>
-      <label for="date">Date of publication</label>
-      <input
-        id="date"
-        type="text"
-        placeholder="Enter the date of publication"
-      />
-    </div>
-    <button>Submit</button>
-  </aside>
+     <button (click)="getNews()">Submit</button>
+</aside>
   <section class="content">
     <!-- news list -->
-    <h2>News</h2>
-    <article [innerHTML]="textNews" class="lista"></article>
+     <h2>News</h2>
+    <article [innerHTML]="textNews" class="lista">
+    </article>
   </section>
 </main>
